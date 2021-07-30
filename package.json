@@ -1,0 +1,31 @@
+{
+  "name": "sample-app",
+  "version": "1.0.0",
+  "description": "complete node-sample.app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js",
+    "start-server": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prashantbansal/node-sample-app.git"
+  },
+  "author": "pb",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/prashantbansal/node-sample-app/issues"
+  },
+  "homepage": "https://github.com/prashantbansal/node-sample-app#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-handlebars": "^3.0.2",
+    "pug": "^3.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}

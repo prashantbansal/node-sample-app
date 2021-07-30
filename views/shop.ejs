@@ -1,0 +1,30 @@
+<%- include('includes/head.ejs') %>
+</head>
+
+<body>
+    <%- include('includes/navigation.ejs') %>
+    <main>
+        <% if (prods.length > 0) { %>
+            <div class = "grid">
+                <% for (let product of prods) { %>
+                    <article class="card product-item">
+                        <header class = "card_header">
+                            <h1 class ="product_title"><%= product.title %></h1>
+                        </header>
+                    </article>
+                    <div class = "card_image"> 
+                        <img src = "" alt="great book">
+                    </div>
+                    <div class="card_content">
+                        <h2 class="product_price">$19.99</h2>
+                        <p class="product_description">A very intersting book to read</p>
+                    </div>
+                <% } %>
+            </div>
+        <% } else { %>
+            <h1> 
+                No Products found
+            </h1>
+         <% } %>
+    </main>
+<%- include('includes/end.ejs') %>

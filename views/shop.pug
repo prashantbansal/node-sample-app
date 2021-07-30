@@ -1,0 +1,31 @@
+extends layouts/main-layout.pug 
+block styles 
+    link(rel="stylesheet", href="/css/main.css")
+
+block content
+    main
+        if prods.length > 0
+            .grid
+                each product in prods
+                    article.card.product-item
+                        header.card_header 
+                            h1.product_title #{product.title}
+                        div.card_image
+                            img(src="https://www.google.com/imgres?imgurl=https%3A%2F%2Fimagesvc.meredithcorp.io%2Fv3%2Fmm%2Fimage%3Furl%3Dhttps%253A%252F%252Fstatic.onecms.io%252Fwp-content%252Fuploads%252Fsites%252F24%252F2018%252F09%252Fgettyimages-183822187-1.jpg%26q%3D85&imgrefurl=https%3A%2F%2Fwww.southernliving.com%2Fculture%2Fbest-classic-books&tbnid=VN36XlR8umNBnM&vet=12ahUKEwjCvOHs64PyAhUBTqwKHd2NDPEQMygWegUIARD6AQ..i&docid=mUqEdgOwlRmKlM&w=2000&h=1328&q=google%20book%20images&ved=2ahUKEwjCvOHs64PyAhUBTqwKHd2NDPEQMygWegUIARD6AQ", alt="A book")
+                        div.card_content
+                            h2.product_price $19.99
+                            p.product_description A very interesting book about so many things 
+                        div.card_actions
+                            button.btn Add to Cart
+        else
+            h1 no products
+
+                    
+
+        
+
+
+
+
+        
+
